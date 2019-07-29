@@ -13,9 +13,6 @@ $(document).ready(function(){
 		.done(function( respuestGIT) {
 		usuario = respuestGIT;
 		
-		
-		
-		
 		$("#nombre_usuario").text(usuario.name);
 		$("#id").text(usuario.id);
 		$("#nombre_empresa").text(usuario.company);
@@ -23,7 +20,7 @@ $(document).ready(function(){
 		$("#numero_gits").text(usuario.public_gists);
 		$("#numero_seguidores").text(usuario.following);
 		$("#numero_seguidos").text(usuario.followers);
-		$("#avatar").attr("src", "https://avatars2.githubusercontent.com/u/4270154?v=4");
+		$("#avatar").attr("src", "https://avatars2.githubusercontent.com/u/" + usuario.id );
 	});
 		$.ajax({
 		method: "GET",
